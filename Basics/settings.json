@@ -11,3 +11,19 @@
     "workbench.settings.applyToAllProfiles": [
     ]
 }
+
+
+{
+    "editor.fontFamily": "Consolas",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "normal",
+
+    "terminal.integrated.fontFamily": "Consolas",
+
+    "workbench.colorTheme": "Dark Modern",
+    "workbench.iconTheme": "vs-seti",
+
+    "window.zoomLevel": 0,
+    "window.titleBarStyle": "custom"
+}
