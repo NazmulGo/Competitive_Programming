@@ -12,133 +12,376 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+
+      
+      // Snippeds : 
+
 	"1": {
       "prefix": "topG",
       "body": [
-      "// Created on: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
-      "",
-      "#include <bits/stdc++.h>",
-      "using namespace std;",
-      "",
-      "typedef long long ll;",
-      "#define vll vector<ll>",
-      "#define pll pair<ll, ll>",
-      "#define all(v) v.begin(), v.end()",
-      "",
-      "#define print(x) cout << #x << \" : \" << x << endl;",
-      "#define here cout << \"I am Here <<  >>\" << endl;",
-      "",
-      "void solve() {",
-      "",
-      "",
-      "}",
-      "",
-      "int main() {",
-      "    ios_base::sync_with_stdio(0);",
-      "    cin.tie(0); cout.tie(0);",
-      "",
-      "    ll tc = 1; cin >> tc;",
-      "    while (tc--) {",
-      "        solve();",
-      "    }",
-      "}",
-      ""
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "#ifndef ONLINE_JUDGE",
+            "#include \"template.cpp\"",
+            "#else",
+            "#define dbg(...)",
+            "#define debug(...)",
+            "#define debugArr(...)",
+            "#endif",
+            "",
+            "typedef long long ll;",
+            "#define all(v) v.begin(), v.end()",
+            "",
+            "void solve() {",
+            "",
+            "",
+            "}",
+            "",
+            "int main() {",
+            "    ios_base::sync_with_stdio(0);",
+            "    cin.tie(0); cout.tie(0);",
+            "",
+            "    ll tc = 1; cin >> tc;",
+            "    while (tc--)  solve();",
+            "}",
+            ""
       ],
       "description": ""
       },
 
 	"2": {
-		"prefix": "zz debugg",
-		"body": [
-      "",
-      "// debuggggggggggggggg hereeeeeeeeeeee : ",
-      "template < typename F, typename S >",
-      "ostream& operator << ( ostream& os, const pair< F, S > & p ) {",
-      "    return os << \"(\" << p.first << \", \" << p.second << \")\";",
-      "}",
-      "",
-      "template < typename T >",
-      "ostream &operator << ( ostream & os, const vector< T > &v ) {",
-      "    os << \"{\";",
-      "    for(auto it = v.begin(); it != v.end(); ++it) {",
-      "        if( it != v.begin() ) os << \", \";",
-      "        os << *it;",
-      "    }",
-      "    return os << \"}\";",
-      "}",
-      "",
-      "template < typename T >",
-      "ostream &operator << ( ostream & os, const set< T > &v ) {",
-      "    os << \"[\";",
-      "    for(auto it = v.begin(); it != v.end(); ++it) {",
-      "        if( it != v.begin() ) os << \", \";",
-      "        os << *it;",
-      "    }",
-      "    return os << \"]\";",
-      "}",
-      "",
-      "template < typename T >",
-      "ostream &operator << ( ostream & os, const multiset< T > &v ) {",
-      "    os << \"[\";",
-      "    for(auto it = v.begin(); it != v.end(); ++it) {",
-      "        if( it != v.begin() ) os << \", \";",
-      "        os << *it;",
-      "    }",
-      "    return os << \"]\";",
-      "}",
-      "",
-      "template < typename F, typename S >",
-      "ostream &operator << ( ostream & os, const map< F, S > &v ) {",
-      "    os << \"[\";",
-      "    for(auto it = v.begin(); it != v.end(); ++it) {",
-      "        if( it != v.begin() ) os << \", \";",
-      "        os << it -> first << \" = \" << it -> second;",
-      "    }",
-      "    return os << \"]\";",
-      "}",
-      "",
-      "#define dbg(args...) do {cerr << #args << \" : \"; faltu(args); } while(0)",
-      "",
-      "void faltu () {",
-      "    cerr << endl;",
-      "}",
-      "",
-      "template <typename T>",
-      "void faltu( T a[], int n ) {",
-      "    for(int i = 0; i < n; ++i) cerr << a[i] << ' ';",
-      "    cerr << endl;",
-      "}",
-      "",
-      "template <typename T, typename ... hello>",
-      "void faltu( T arg, const hello &... rest) {",
-      "    cerr << arg << ' ';",
-      "    faltu(rest...);",
-      "}",
-	  "//Debugggggg endddddd <>",
-	  ""
-		],
-		"description": ""
-	},
-
-
-	"3": {
-		"prefix": "zz NT HermonicSeries",
-		"body": [
-            "vector<ll> cnt(N+1);",
+      "prefix": "zz debugg",
+      "body": [
             "",
-            "void Hermonic() {",
-            "    for(int i=1; i<=N; i++) {",
-            "        for(int j=i; j<=N; j+=i) {",
-            "            cnt[j]++;",
-            "        }",
+            "// debuggggggggggggggg hereeeeeeeeeeee : ",
+            "template < typename F, typename S >",
+            "ostream& operator << ( ostream& os, const pair< F, S > & p ) {",
+            "    return os << \"(\" << p.first << \", \" << p.second << \")\";",
+            "}",
+            "",
+            "template < typename T >",
+            "ostream &operator << ( ostream & os, const vector< T > &v ) {",
+            "    os << \"{\";",
+            "    for(auto it = v.begin(); it != v.end(); ++it) {",
+            "        if( it != v.begin() ) os << \", \";",
+            "        os << *it;",
             "    }",
-            "}"
-		],
-		"description": ""
-	},
+            "    return os << \"}\";",
+            "}",
+            "",
+            "template < typename T >",
+            "ostream &operator << ( ostream & os, const set< T > &v ) {",
+            "    os << \"[\";",
+            "    for(auto it = v.begin(); it != v.end(); ++it) {",
+            "        if( it != v.begin() ) os << \", \";",
+            "        os << *it;",
+            "    }",
+            "    return os << \"]\";",
+            "}",
+            "",
+            "template < typename T >",
+            "ostream &operator << ( ostream & os, const multiset< T > &v ) {",
+            "    os << \"[\";",
+            "    for(auto it = v.begin(); it != v.end(); ++it) {",
+            "        if( it != v.begin() ) os << \", \";",
+            "        os << *it;",
+            "    }",
+            "    return os << \"]\";",
+            "}",
+            "",
+            "template < typename F, typename S >",
+            "ostream &operator << ( ostream & os, const map< F, S > &v ) {",
+            "    os << \"[\";",
+            "    for(auto it = v.begin(); it != v.end(); ++it) {",
+            "        if( it != v.begin() ) os << \", \";",
+            "        os << it -> first << \" = \" << it -> second;",
+            "    }",
+            "    return os << \"]\";",
+            "}",
+            "",
+            "#define dbg(args...) do {cerr << #args << \" : \"; faltu(args); } while(0)",
+            "",
+            "void faltu () {",
+            "    cerr << endl;",
+            "}",
+            "",
+            "template <typename T>",
+            "void faltu( T a[], int n ) {",
+            "    for(int i = 0; i < n; ++i) cerr << a[i] << ' ';",
+            "    cerr << endl;",
+            "}",
+            "",
+            "template <typename T, typename ... hello>",
+            "void faltu( T arg, const hello &... rest) {",
+            "    cerr << arg << ' ';",
+            "    faltu(rest...);",
+            "}",
+            "//Debugggggg endddddd <>",
+            ""
+	],
+      "description": ""
+      },
+
+      "3": {
+            "prefix": "zz Snip_4_Direction_Array",
+            "body": [
+                  "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
+                  "int dy[] = {1, -1, 0, 0, 1, -1, 1, -1};",
+                  ""
+            ],
+            "description": ""
+      },
+
+      "4": {
+      "prefix": "zz Snip4_gnu_pds_library",
+      "body": [
+            "#include<ext/pb_ds/assoc_container.hpp>",
+            "#include<ext/pb_ds/tree_policy.hpp>",
+            "using namespace __gnu_pbds;",
+            ""
+      ],
+      "description": ""
+      },
+
+      "5": {
+      "prefix": "zz Snip4_custom_hash",
+      "body": [
+            "#include<ext/pb_ds/assoc_container.hpp>",
+            "#include<ext/pb_ds/tree_policy.hpp>",
+            "using namespace __gnu_pbds;",
+            "",
+            "struct chash {",
+            "    const int random=(long long int)(make_unique<char>().get())",
+            "        ^ chrono::high_resolution_clock::now().time_since_epoch().count();",
+            "    static unsigned long long splitmix64(unsigned long long x) {",
+            "        x += 0x9e3779b97f4a7c15;",
+            "        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;",
+            "        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;",
+            "        return x ^ (x >> 31);",
+            "    }",
+            "    int operator()(int x) const {",
+            "        return splitmix64(x+random);",
+            "    }",
+            "    int operator()(pair<int,int> x) const {",
+            "        unsigned num=(x.first^(x.second>>1));",
+            "        return splitmix64(num+random);",
+            "    }",
+            "    //for vector as key I can also do the similarl thing for lower collision",
+            "    long long operator()(string s) const {",
+            "        const int p = 31;  ",
+            "        //for only lowercase p=31,for lowercase+uppercase p=53",
+            "        const int m = 1e9 + 9;",
+            "        long long hash_value = 0;",
+            "        long long p_pow = 1;",
+            "",
+            "        for (char c : s) {",
+            "            hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;",
+            "            p_pow = (p_pow * p) % m;",
+            "        }",
+            "        return hash_value;",
+            "    }",
+            "};",
+            "//for int as key: unordered_map<int,int,chash>mp; / gp_hash_table<int,int,chash>mp;",
+            "",
+            "//for pair<int,int> as key: unordered_map<pair<int,int>,int,chash>mp; / gp_hash_table<pair<int,int>,int,chash>mp;",
+            "",
+            "//for string as key: unordered_map<string,int,chash>mp; / gp_hash_table<string,int,chash>mp;"
+      ],
+      "description": ""
+      },
+
+      "6": {
+            "prefix": "YES__NO",
+            "body": [
+            "#define yes cout << \"YES\" << endl",
+            "#define no cout << \"NO\" << endl"
+            ],
+            "description": ""
+      },
+
+      "7": {
+      "prefix": "fori",
+      "body": [
+            "for(int i=0; i<n; i++) "
+      ],
+      "description": ""
+      },
+
+      "8": {
+      "prefix": "forj",
+      "body": [
+            "for(int j=0; j<m; j++) "
+      ],
+      "description": ""
+      },
 
 
-	"4": {
+      "9": {
+      "prefix": "fori1",
+      "body": [
+            "for(int i=1; i<=n; i++) "
+      ],
+      "description": ""
+      },
+
+      "10": {
+      "prefix": "forj1",
+      "body": [
+            "for(int j=1; j<=m; j++) "
+      ],
+      "description": ""
+      },
+
+      "11": {
+      "prefix": "zz Template.cpp",
+      "body": [
+            "//1. Save as template.cpp in same folder",
+            "// USE Them in Main.cpp",
+            "",
+            "// #ifndef ONLINE_JUDGE",
+            "// #include \"template.cpp\"",
+            "// #else",
+            "// #define dbg(...)",
+            "// #define debug(...)",
+            "// #define debugArr(...)",
+            "// #endif",
+            "",
+            "//Call dbg(arrayname)",
+            "",
+            "#ifndef DEBUG_TEMPLATE_CPP",
+            "#define DEBUG_TEMPLATE_CPP",
+            "",
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "#ifndef ONLINE_JUDGE",
+            "",
+            "template<typename F, typename S>",
+            "ostream& operator<<(ostream& os, const pair<F, S>& p) {",
+            "    return os << \"(\" << p.first << \", \" << p.second << \")\";",
+            "}",
+            "",
+            "template<typename T>",
+            "ostream& operator<<(ostream& os, const vector<T>& v) {",
+            "    os << \"{\";",
+            "    for (auto it = v.begin(); it != v.end(); ++it) {",
+            "        if (it != v.begin()) os << \", \";",
+            "        os << *it;",
+            "    }",
+            "    return os << \"}\";",
+            "}",
+            "",
+            "template<typename T>",
+            "ostream& operator<<(ostream& os, const set<T>& v) {",
+            "    os << \"{\";",
+            "    for (auto it = v.begin(); it != v.end(); ++it) {",
+            "        if (it != v.begin()) os << \", \";",
+            "        os << *it;",
+            "    }",
+            "    return os << \"}\";",
+            "}",
+            "",
+            "template<typename T>",
+            "ostream& operator<<(ostream& os, const multiset<T>& v) {",
+            "    os << \"{\";",
+            "    for (auto it = v.begin(); it != v.end(); ++it) {",
+            "        if (it != v.begin()) os << \", \";",
+            "        os << *it;",
+            "    }",
+            "    return os << \"}\";",
+            "}",
+            "",
+            "template<typename F, typename S>",
+            "ostream& operator<<(ostream& os, const map<F, S>& v) {",
+            "    os << \"{\";",
+            "    for (auto it = v.begin(); it != v.end(); ++it) {",
+            "        if (it != v.begin()) os << \", \";",
+            "        os << it->first << \" : \" << it->second;",
+            "    }",
+            "    return os << \"}\";",
+            "}",
+            "",
+            "template<typename T1, typename T2>",
+            "ostream& operator<<(ostream& os, const unordered_map<T1, T2>& v) {",
+            "    os << \"{\";",
+            "    bool first = true;",
+            "    for (auto &x : v) {",
+            "        if (!first) os << \", \";",
+            "        first = false;",
+            "        os << x.first << \" : \" << x.second;",
+            "    }",
+            "    return os << \"}\";",
+            "}",
+            "",
+            "template<typename T>",
+            "ostream& operator<<(ostream& os, const unordered_set<T>& v) {",
+            "    os << \"{\";",
+            "    bool first = true;",
+            "    for (auto &x : v) {",
+            "        if (!first) os << \", \";",
+            "        first = false;",
+            "        os << x;",
+            "    }",
+            "    return os << \"}\";",
+            "}",
+            "",
+            "inline void faltu() {",
+            "    cerr << '\\n';",
+            "}",
+            "",
+            "template<typename T>",
+            "void faltu(T arr[], int n) {",
+            "    for (int i = 0; i < n; i++)",
+            "        cerr << arr[i] << ' ';",
+            "    cerr << '\\n';",
+            "}",
+            "",
+            "template<typename T, typename... Args>",
+            "void faltu(T arg, Args... args) {",
+            "    cerr << arg;",
+            "    if (sizeof...(args)) cerr << \" | \";",
+            "    faltu(args...);",
+            "}",
+            "",
+            "#define dbg(...) do {                     \\",
+            "    cerr << \"[\" << __LINE__ << \"] \";      \\",
+            "    cerr << #__VA_ARGS__ << \" = \";        \\",
+            "    faltu(__VA_ARGS__);                   \\",
+            "} while (0)",
+            "",
+            "#else",
+            "",
+            "#define dbg(...)",
+            "",
+            "#endif",
+            "",
+            "#endif"
+      ],
+      "description": ""
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // NUMBER THEORY 100
+
+
+
+	"101": {
 		"prefix": "zz NT Sieve",
 		"body": [
             "vector<bool> isPrime(N+1, true);",
@@ -163,10 +406,36 @@
 	},
 
 
-	"5": {
+     "102": {
+      "prefix": "zz NT Linear Sieve",
+      "body": [
+            "const int N = 1e6 + 12;",
+            "vector<int> spf(N + 1, 0);",
+            "vector<int> primes;",
+            "",
+            "bool isPrime(int x) {",
+            "    return x >= 2 && spf[x] == x;",
+            "}",
+            "",
+            "void linear_sieve() {",
+            "    for (int i = 2; i <= N; i++) {",
+            "        if (spf[i] == 0) spf[i] = i, primes.push_back(i);",
+            "        for (int j = 0; j < (int)primes.size() && 1LL * i * primes[j] <= N; j++) {",
+            "            spf[i * primes[j]] = primes[j];",
+            "            if (primes[j] == spf[i]) break;",
+            "        }",
+            "    }",
+            "}"
+      ],
+      "description": ""
+      },
+
+
+
+	"103": {
 		"prefix": "zz NT PrimeFact",
 		"body": [
-            "vll primeFactors(ll n) {",
+            "vector<ll> primeFactors(ll n) {",
             "   vector<ll> fact;",
             "   for(int i=0; i<primes.size(); i++) {",
             "       if(1LL * primes[i] * primes[i] > n) break;",
@@ -185,42 +454,335 @@
 		"description": ""
 	},
 
+      "104": {
+      "prefix": "zz NT Bitwise_Sieve",
+      "body": [
+            "const int N = 100000000; ",
+            "vector<int> mark((N >> 6) + 5);",
+            "vector<int> primes;",
+            "",
+            "inline bool isComposite(int x) {",
+            "    return mark[x >> 6] & (1 << ((x >> 1) & 31));",
+            "}",
+            "inline void setComposite(int x) {",
+            "    mark[x >> 6] |= (1 << ((x >> 1) & 31));",
+            "}",
+            "bool isPrime(int n) {",
+            "    if (n == 2) return true;",
+            "    if (n < 2 || (n & 1) == 0) return false;",
+            "    return !isComposite(n);",
+            "}",
+            "",
+            "void bitwise_sieve() {",
+            "    int limit = sqrt(N);",
+            "",
+            "    for (int i = 3; i <= limit; i += 2) {",
+            "        if (!isComposite(i)) {",
+            "            for (int j = i * i; j <= N; j += i << 1) setComposite(j);",
+            "        }",
+            "    }",
+            "",
+            "    primes.push_back(2);",
+            "    for (int i = 3; i <= N; i += 2) {",
+            "        if (!isComposite(i)) primes.push_back(i);",
+            "    }",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
 
-      "6": {
-		"prefix": "zz Ordered set",
-		"body": [
-            "//// PBDS (Policy Based Data Structure - Ordered Set)",
-            "#include<ext/pb_ds/assoc_container.hpp>",
-            "#include<ext/pb_ds/tree_policy.hpp>",
-            "using namespace __gnu_pbds;",
-            "template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;",
-            "//oset <ll> s;  --> Declare ordered set",
-            "//s.order_of_key(val)  --> val ta kun index e ache",
-            "//*(s.find_by_order(i)) --> ith index e value"
-		],
-		"description": ""
-	},
+
+      "105": {
+      "prefix": "zz NT NOD",
+      "body": [
+            "ll NOD(ll n) {",
+            "    ll ans = 1;",
+            "    for(int i=0; i<primes.size(); i++) {",
+            "        if(1LL * primes[i] * primes[i] > n) break;",
+            "        if(n % primes[i] == 0) {",
+            "            ll ct = 0;",
+            "            while(n % primes[i] == 0) {",
+            "                n /= primes[i];",
+            "                ct++;",
+            "            }",
+            "            ans *= (ct+1);",
+            "        }",
+            "    }",
+            "    if(n > 1) ans *= 2;",
+            "    return ans;",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
+
+       "106": {
+      "prefix": "zz NT SumOfDivisors",
+      "body": [
+            "ll SumOfDivisors(ll n) {",
+            "    ll ans = 1;",
+            "    for(int i=0; i<primes.size(); i++) {",
+            "        if(1LL * primes[i] * primes[i] > n) break;",
+            "        if(n % primes[i] == 0) {",
+            "            ll pwr = 1, sum = 1;",
+            "            while(n % primes[i] == 0) {",
+            "                n /= primes[i];",
+            "                pwr *= primes[i];",
+            "                sum += pwr;",
+            "            }",
+            "            ans *= sum;",
+            "        }",
+            "    }",
+            "    if(n > 1) ans *= (n+1);",
+            "    return ans;",
+            "",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
+
+      "107": {
+      "prefix": "zz NT SNOD (1-N all div count sum)",
+      "body": [
+            "ll SNOD(ll n) {",
+            "    ll score = 0;",
+            "    for(ll i=1; i*i <= n; i++) {",
+            "        ll contri_i = (n/i)-i;",
+            "        score += contri_i;",
+            "    }",
+            "    score * 2;",
+            "    score += sqrtl(n);",
+            "    return score;",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
+
+      "108": {
+      "prefix": "zz NT Miller_Rabin",
+      "body": [
+            "using int64 = long long;", 
+            "using u64 = uint64_t;",
+            "using u128 = __uint128_t;",  
+            "",
+            "u64 mod_mul(u64 a, u64 b, u64 mod) {",
+            "    return (u128)a * b % mod;",
+            "}",
+            "",
+            "u64 mod_pow(u64 a, u64 d, u64 mod) {",
+            "    u64 res = 1;",
+            "    while (d) {",
+            "        if (d & 1) res = mod_mul(res, a, mod);",
+            "        a = mod_mul(a, a, mod);",
+            "        d >>= 1;",
+            "    }",
+            "    return res;",
+            "}",
+            "",
+            "bool isPrime(u64 n) {",
+            "    if (n < 2) return false;",
+            "    for (u64 p : {2,3,5,7,11,13,17,19,23,29,31,37}) {",
+            "        if (n % p == 0) return n == p;",
+            "    }",
+            "",
+            "    u64 d = n - 1, s = 0;",
+            "    while ((d & 1) == 0) {",
+            "        d >>= 1;",
+            "        s++;",
+            "    }",
+            "",
+            "    for (u64 a : {2,325,9375,28178,450775,9780504,1795265022}) {",
+            "        if (a % n == 0) continue;",
+            "",
+            "        u64 x = mod_pow(a, d, n);",
+            "        if (x == 1 || x == n - 1) continue;",
+            "",
+            "        bool ok = false;",
+            "        for (u64 r = 1; r < s; r++) {",
+            "            x = mod_mul(x, x, n);",
+            "            if (x == n - 1) {",
+            "                ok = true;",
+            "                break;",
+            "            }",
+            "        }",
+            "        if (!ok) return false;",
+            "    }",
+            "    return true;",
+            "}"
+      ],
+      "description": ""
+      },
 
 
-      "7": {
+      "109": {
+      "prefix": "zz NT PollardRho",
+      "body": [
+            "namespace PollardRho {",
+            "  mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());",
+            "  const int P = 1e6 + 9;",
+            "  ll seq[P];",
+            "  int primes[P], spf[P];",
+            "",
+            "  inline ll add_mod(ll x, ll y, ll m) {",
+            "    return (x += y) < m ? x : x - m;",
+            "  }",
+            "",
+            "  inline ll mul_mod(ll x, ll y, ll m) {",
+            "    ll res = __int128(x) * y % m;",
+            "    return res;",
+            "  }",
+            "",
+            "  inline ll pow_mod(ll x, ll n, ll m) {",
+            "    ll res = 1 % m;",
+            "    for (; n; n >>= 1) {",
+            "      if (n & 1) res = mul_mod(res, x, m);",
+            "      x = mul_mod(x, x, m);",
+            "    }",
+            "    return res;",
+            "  }",
+            "  // O(it * (logn)^3), it = number of rounds performed",
+            "  inline bool miller_rabin(ll n) {",
+            "    if (n <= 2 || (n & 1 ^ 1)) return (n == 2);",
+            "    if (n < P) return spf[n] == n;",
+            "    ll c, d, s = 0, r = n - 1;",
+            "    for (; !(r & 1); r >>= 1, s++) {}",
+            "    // each iteration is a round",
+            "    for (int i = 0; primes[i] < n && primes[i] < 32; i++) {",
+            "      c = pow_mod(primes[i], r, n);",
+            "      for (int j = 0; j < s; j++) {",
+            "        d = mul_mod(c, c, n);",
+            "        if (d == 1 && c != 1 && c != (n - 1)) return false;",
+            "        c = d;",
+            "      }",
+            "      if (c != 1) return false;",
+            "    }",
+            "    return true;",
+            "  }",
+            "",
+            "  void init() {",
+            "    int cnt = 0;",
+            "    for (int i = 2; i < P; i++) {",
+            "      if (!spf[i]) primes[cnt++] = spf[i] = i;",
+            "      for (int j = 0, k; (k = i * primes[j]) < P; j++) {",
+            "        spf[k] = primes[j];",
+            "        if (spf[i] == spf[k]) break;",
+            "      }",
+            "    }",
+            "  }",
+            "",
+            "  // returns O(n^(1/4))",
+            "  ll pollard_rho(ll n) {",
+            "    while (1) {",
+            "      ll x = rnd() % n, y = x, c = rnd() % n, u = 1, v, t = 0;",
+            "      ll *px = seq, *py = seq;",
+            "      while (1) {",
+            "        *py++ = y = add_mod(mul_mod(y, y, n), c, n);",
+            "        *py++ = y = add_mod(mul_mod(y, y, n), c, n);",
+            "        if ((x = *px++) == y) break;",
+            "        v = u;",
+            "        u = mul_mod(u, abs(y - x), n);",
+            "        if (!u) return __gcd(v, n);",
+            "        if (++t == 32) {",
+            "          t = 0;",
+            "          if ((u = __gcd(u, n)) > 1 && u < n) return u;",
+            "        }",
+            "      }",
+            "      if (t && (u = __gcd(u, n)) > 1 && u < n) return u;",
+            "    }",
+            "  }",
+            "",
+            "  vector<ll> factorize(ll n) {",
+            "    if (n == 1) return vector <ll>();",
+            "    if (miller_rabin(n)) return vector<ll> {n};",
+            "    vector <ll> v, w;",
+            "    while (n > 1 && n < P) {",
+            "      v.push_back(spf[n]);",
+            "      n /= spf[n];",
+            "    }",
+            "    if (n >= P) {",
+            "      ll x = pollard_rho(n);",
+            "      v = factorize(x);",
+            "      w = factorize(n / x);",
+            "      v.insert(v.end(), w.begin(), w.end());",
+            "    }",
+            "    return v;",
+            "  }",
+            "",
+            "//   in main fn() ",
+            "//   for pre calc() : PollardRho::init();",
+            "",
+            "//   in solve() : ",
+            "//   vector<ll> x = PollardRho::factorize(n); then sort",
+            "",
+            "}"
+      ],
+      "description": ""
+      },
+
+      "110": {
+      "prefix": "zz NT powerFact to divisors",
+      "body": [
+            "// ---------------- Added Part ----------------",
+            "",
+            "void gen(int idx, ll cur, vector<pair<ll, int>> &fac, vector<ll> &divs) {",
+            "    if (idx == fac.size()) {",
+            "        divs.push_back(cur);",
+            "        return;",
+            "    }",
+            "",
+            "    auto [p, e] = fac[idx];",
+            "",
+            "    ll pw = 1;",
+            "    for (int i = 0; i <= e; i++) {",
+            "        gen(idx + 1, cur * pw, fac, divs);",
+            "        pw *= p;",
+            "    }",
+            "}",
+            "",
+            "vector<ll> conv(vector<ll> &x) {",
+            "    vector<pair<ll, int>> fac;",
+            "    for (ll p : x) {",
+            "        if (fac.empty() || fac.back().first != p) fac.push_back({p, 1});",
+            "        else fac.back().second++;",
+            "    }",
+            "",
+            "    vector<ll> divisors;",
+            "    gen(0, 1, fac, divisors);",
+            "    sort(all(divisors));",
+            "    return divisors;",
+            "}",
+            "",
+            "",
+            "// --------------------------------------------"
+      ],
+      "description": ""
+      },
+
+
+
+
+      "111": {
 		"prefix": "zz NT bigmod",
 		"body": [
-            "ll bigmod(ll a, ll b, ll mod) {",
-            "   ll ans = 1;",
-            "   while(b) {",
-            "   if(b & 1) ans = (ans * a) % mod;",
-            "      a = (a * a) % mod;",
-            "      b >>= 1;",
-            "   }",
-            "   return ans;",
-            "}"
+                  "ll bigmod(ll a, ll b, ll mod) {",
+                  "   ll ans = 1;",
+                  "   while(b) {",
+                  "   if(b & 1) ans = (ans * a) % mod;",
+                  "      a = (a * a) % mod;",
+                  "      b >>= 1;",
+                  "   }",
+                  "   return ans;",
+                  "}"
                   
 		],
 		"description": ""
 	},
 
 
-      "8": {
+      "112": {
 		"prefix": "zz NT gcdlcm",
 		"body": [
                   "ll gcd(ll a,ll b) { return __gcd(a,b); }",
@@ -230,45 +792,118 @@
 		"description": ""
 	},
 
-
-      "9": {
-		"prefix": "zz Snip_4_Direction_Array",
-		"body": [
-                  "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
-                  "int dy[] = {1, -1, 0, 0, 1, -1, 1, -1};",
-                  ""
-		],
-		"description": ""
-	},
-
-
-      "10": {
-      "prefix": "zz NT SumOfDivisors",
+      "113": {
+      "prefix": "zz NT NumberofDigit",
       "body": [
-      "ll SumOfDivisors(ll n) {",
-      "    ll ans = 1;",
-      "    for(int i=0; i<primes.size(); i++) {",
-      "        if(1LL * primes[i] * primes[i] > n) break;",
-      "        if(n % primes[i] == 0) {",
-      "            ll pwr = 1, sum = 1;",
-      "            while(n % primes[i] == 0) {",
-      "                n /= primes[i];",
-      "                pwr *= primes[i];",
-      "                sum += pwr;",
-      "            }",
-      "            ans *= sum;",
-      "        }",
-      "    }",
-      "    if(n > 1) ans *= (n+1);",
-      "    return ans;",
-      "",
-      "}",
-      ""
+            "ll digits = floor(log10(n))+1;"
       ],
       "description": ""
       },
 
-      "11": {
+
+      "114": {
+      "prefix": "zz NT xor_calc",
+      "body": [
+            "int computeXOR(int n) {",
+            "  if (n % 4 == 0) return n;",
+            "  if (n % 4 == 1) return 1;",
+            "  if (n % 4 == 2) return n + 1;",
+            "  return 0;",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
+
+
+      "115": {
+      "prefix": "zz NT isPowerOfTwo",
+      "body": [
+            "bool isPowerOfTwo(int n) {",
+            "    if (n <= 0) return false;",
+            "    return (n & (n - 1)) == 0;",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
+
+
+      "116": {
+      "prefix": "zz NT bitwise_stuffs",
+      "body": [
+            "#define ONBIT(x, k) ((x) | (1ll << k))",
+            "#define OFFBIT(x, k) ((x) & (~ (1ll << k)))",
+            "#define ONOROFF(x, k) ((x) & (1ll << k))",
+            "#define FLIPBIT(x, k) ((x) ^ (1ll << k))",
+            " ",
+            "int pop_count(int x) { return __builtin_popcount(x); }",
+            "int pop_countll(ll x) { return __builtin_popcountll(x); }",
+
+            "int MSB_index(int x) { return (x == 0 ? -1 : 31 - __builtin_clz(x)); }",
+            "int MSB_indexll(ll x) { return (x == 0 ? -1 : 63 - __builtin_clzll(x)); }",
+
+            "int LSB_index(int x) { return (x == 0 ? -1 : __builtin_ctz(x)); }",
+            "int LSB_indexll(ll x) { return (x == 0 ? -1 : __builtin_ctzll(x)); }",
+            ""
+      ],
+      "description": ""
+      },
+
+
+
+      "117": {
+      "prefix": "zz NT BinDec Convertion",
+      "body": [
+            "ll binaryToDecimal(string &s) {",
+            "    ll ans = 0;",
+            "    ll base = 1; ",
+            " ",
+            "    for (ll i = s.length() - 1; i >= 0; i--) {",
+            "        if (s[i] == '1') {",
+            "            ans += base;",
+            "        }",
+            "        base *= 2;",
+            "    }",
+            "    return ans;",
+            "}",
+            " ",
+            "string decimalToBinary(ll n) {",
+            "    if (n == 0) return \"0\";",
+            "    string s;",
+            "    while(n != 0) {",
+            "        s.push_back((n & 1) + '0');",
+            "        n /= 2;",
+            "    }",
+            "    reverse(all(s));",
+            "    return s;",
+            "}",
+            ""
+      ],
+      "description": ""
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // GRAPH THEORY 200
+     
+
+
+
+      "201": {
       "prefix": "zz g_clear",
       "body": [
             "vector<ll> g[N]; ",
@@ -285,101 +920,147 @@
       "description": ""
       },
 
-      "12": {
-      "prefix": "zz NT SNOD (1-N all div count sum)",
-      "body": [
-      "ll SNOD(ll n) {",
-      "    ll score = 0;",
-      "    for(ll i=1; i*i <= n; i++) {",
-      "        ll contri_i = (n/i)-i;",
-      "        score += contri_i;",
-      "    }",
-      "    score * 2;",
-      "    score += sqrtl(n);",
-      "    return score;",
-      "}",
-      ""
-      ],
-      "description": ""
+
+      "202": {
+            "prefix": "zz Graph longest Path down to v",
+            "body": [
+                  "ll dfs(ll u) {",
+                  "    vis[u] = true;",
+                  "    for(auto v : g[u]) {",
+                  "",
+                  "        if(!vis[v]) {",
+                  "            lvl[u] = max(lvl[u], dfs(v) + 1);",
+                  "        }",
+                  "    }",
+                  "    return lvl[u];",
+                  "}",
+                  ""
+            ],
+            "description": ""
       },
 
-
-      "13": {
-      "prefix": "zz NT NOD",
-      "body": [
-      "ll NOD(ll n) {",
-      "    ll ans = 1;",
-      "    for(int i=0; i<primes.size(); i++) {",
-      "        if(1LL * primes[i] * primes[i] > n) break;",
-      "        if(n % primes[i] == 0) {",
-      "            ll ct = 0;",
-      "            while(n % primes[i] == 0) {",
-      "                n /= primes[i];",
-      "                ct++;",
-      "            }",
-      "            ans *= (ct+1);",
-      "        }",
-      "    }",
-      "    if(n > 1) ans *= 2;",
-      "    return ans;",
-      "}",
-      ""
-      ],
-      "description": ""
+      "203": {
+            "prefix": "zz Graph Tree Diameter",
+            "body": [
+                  "#include <bits/stdc++.h>",
+                  "using namespace std;",
+                  "typedef long long ll;",
+                  "#define vll vector<ll>",
+                  "#define pll pair<ll, ll>",
+                  "#define endl \"\\n\" ",
+                  "#define all(v) v.begin(), v.end()",
+                  "const int N = 2e5+123;",
+                  "",
+                  "vector<ll> g[N]; ",
+                  "vll lvl;",
+                  "",
+                  "void g_clear(int n){",
+                  "    for(int i=0; i<=n; i++) g[i].clear();",
+                  "    lvl.assign(n+1, 0);",
+                  "}",
+                  "",
+                  "void dfs(ll u, ll p) {",
+                  "    for(auto v : g[u]) {",
+                  "        if(v != p) {",
+                  "            lvl[v] = 1 + lvl[u];",
+                  "            dfs(v, u);",
+                  "        }",
+                  "    }",
+                  "}",
+                  "",
+                  "pll diameter(ll n) {",
+                  "",
+                  "    dfs(1, 0);",
+                  "    ll d1 = max_element(all(lvl)) - lvl.begin();",
+                  "    lvl.assign(n+1, 0);",
+                  "    dfs(d1, 0);",
+                  "    ll d2 = max_element(all(lvl)) - lvl.begin();",
+                  "",
+                  "    return {d1, d2};",
+                  "}",
+                  "",
+                  "void solve() {",
+                  "    ll n; cin >> n;",
+                  "    g_clear(n);",
+                  "    for(int i=1; i<n; i++) {",
+                  "        ll u, v; cin >> u >> v;",
+                  "        g[u].push_back(v);",
+                  "        g[v].push_back(u);",
+                  "    }",
+                  "",
+                  "   auto x = diameter(n);",
+                  "   cout << x.first << \" \" << x.second << endl;",
+                  "}",
+                  "",
+                  "",
+                  "int main() {",
+                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
+                  "    cout.tie(0);",
+                  "",
+                  "    ll tc = 1;  cin >> tc;",
+                  "    while(tc--) {",
+                  "        solve();",
+                  "    }",
+                  "}"
+            ],
+            "description": ""
       },
 
+     
 
-      "14": {
+
+
+      "204": {
       "prefix": "zz Graph DFS",
       "body": [
-      "ll n, m;",
-      "bool vis[N];",
-      "vector<ll> g[N];",
-      "",
-      "void dfs(ll u) {",
-      "    vis[u] = true;",
-      "    for(auto v : g[u]) {",
-      "        if(!vis[v]) {",
-      "            dfs(v);",
-      "        }",
-      "    }",
-      "}",
-      ""
+            "ll n, m;",
+            "bool vis[N];",
+            "vector<ll> g[N];",
+            "",
+            "void dfs(ll u) {",
+            "    vis[u] = true;",
+            "    for(auto v : g[u]) {",
+            "        if(!vis[v]) {",
+            "            dfs(v);",
+            "        }",
+            "    }",
+            "}",
+            ""
       ],
       "description": ""
       },
 
 
-    "15": {
+    "205": {
       "prefix": "zz Graph BFS",
       "body": [
-      "void bfs(int s) {",
-      "    queue<int> q;",
-      "    q.push(s);",
-      "    vis[s] = true;",
-      "    lvl[s] = 0;",
-      "    par[s] = s;",
-      "",
-      "    while (!q.empty()) {",
-      "        int u = q.front();",
-      "        q.pop();",
-      "",
-      "        for (int v : g[u]) {",
-      "            if (!vis[v]) {",
-      "                vis[v] = true;",
-      "                lvl[v] = lvl[u] + 1;",
-      "                q.push(v);",
-      "                par[v] = u;",
-      "            }",
-      "        }",
-      "    }",
-      "}"
+            "void bfs(int s) {",
+            "    queue<int> q;",
+            "    q.push(s);",
+            "    vis[s] = true;",
+            "    lvl[s] = 0;",
+            "    par[s] = s;",
+            "",
+            "    while (!q.empty()) {",
+            "        int u = q.front();",
+            "        q.pop();",
+            "",
+            "        for (int v : g[u]) {",
+            "            if (!vis[v]) {",
+            "                vis[v] = true;",
+            "                lvl[v] = lvl[u] + 1;",
+            "                q.push(v);",
+            "                par[v] = u;",
+            "            }",
+            "        }",
+            "    }",
+            "}"
       ],
       "description": ""
       },
 
 
-      "16": {
+      "206": {
             "prefix": "zz Graph Cyclc Undirected",
             "body": [
                   "// Created on: 2026-01-14 16:48",
@@ -470,68 +1151,9 @@
             "description": ""
       },
 
-      
-      "17": {
-      "prefix": "zz snip4_gnu_pds_library",
-      "body": [
-      "#include<ext/pb_ds/assoc_container.hpp>",
-      "#include<ext/pb_ds/tree_policy.hpp>",
-      "using namespace __gnu_pbds;",
-      ""
-      ],
-      "description": ""
-      },
 
 
-      "18": {
-      "prefix": "zz snip4_custom_hash",
-      "body": [
-      "#include<ext/pb_ds/assoc_container.hpp>",
-      "#include<ext/pb_ds/tree_policy.hpp>",
-      "using namespace __gnu_pbds;",
-      "",
-      "struct chash {",
-      "    const int random=(long long int)(make_unique<char>().get())",
-      "        ^ chrono::high_resolution_clock::now().time_since_epoch().count();",
-      "    static unsigned long long splitmix64(unsigned long long x) {",
-      "        x += 0x9e3779b97f4a7c15;",
-      "        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;",
-      "        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;",
-      "        return x ^ (x >> 31);",
-      "    }",
-      "    int operator()(int x) const {",
-      "        return splitmix64(x+random);",
-      "    }",
-      "    int operator()(pair<int,int> x) const {",
-      "        unsigned num=(x.first^(x.second>>1));",
-      "        return splitmix64(num+random);",
-      "    }",
-      "    //for vector as key I can also do the similarl thing for lower collision",
-      "    long long operator()(string s) const {",
-      "        const int p = 31;  ",
-      "        //for only lowercase p=31,for lowercase+uppercase p=53",
-      "        const int m = 1e9 + 9;",
-      "        long long hash_value = 0;",
-      "        long long p_pow = 1;",
-      "",
-      "        for (char c : s) {",
-      "            hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;",
-      "            p_pow = (p_pow * p) % m;",
-      "        }",
-      "        return hash_value;",
-      "    }",
-      "};",
-      "//for int as key: unordered_map<int,int,chash>mp; / gp_hash_table<int,int,chash>mp;",
-      "",
-      "//for pair<int,int> as key: unordered_map<pair<int,int>,int,chash>mp; / gp_hash_table<pair<int,int>,int,chash>mp;",
-      "",
-      "//for string as key: unordered_map<string,int,chash>mp; / gp_hash_table<string,int,chash>mp;"
-      ],
-      "description": ""
-      },
-      
-
-    "19": {
+    "207": {
       "prefix": "zz Graph Dijkstra",
       "body": [
       "ll n, m;",
@@ -563,332 +1185,8 @@
       "description": ""
       },
 
-      "20": {
-      "prefix": "zz NT xor_calc",
-      "body": [
-      "int computeXOR(int n) {",
-      "  if (n % 4 == 0) return n;",
-      "  if (n % 4 == 1) return 1;",
-      "  if (n % 4 == 2) return n + 1;",
-      "  return 0;",
-      "}",
-      ""
-      ],
-      "description": ""
-      },
 
-
-      "21": {
-      "prefix": "zz NT isPowerOfTwo",
-      "body": [
-      "bool isPowerOfTwo(int n) {",
-      "    if (n <= 0) return false;",
-      "    return (n & (n - 1)) == 0;",
-      "}",
-      ""
-      ],
-      "description": ""
-      },
-
-
-      "22": {
-      "prefix": "zz NT bitwise_stuffs",
-      "body": [
-      "#define ONBIT(x, k) ((x) | (1ll << k))",
-      "#define OFFBIT(x, k) ((x) & (~ (1ll << k)))",
-      "#define ONOROFF(x, k) ((x) & (1ll << k))",
-      "#define FLIPBIT(x, k) ((x) ^ (1ll << k))",
-      " ",
-      "int pop_count(int x) { return __builtin_popcount(x); }",
-      "int pop_countll(ll x) { return __builtin_popcountll(x); }",
-
-      "int MSB_index(int x) { return (x == 0 ? -1 : 31 - __builtin_clz(x)); }",
-      "int MSB_indexll(ll x) { return (x == 0 ? -1 : 63 - __builtin_clzll(x)); }",
-
-      "int LSB_index(int x) { return (x == 0 ? -1 : __builtin_ctz(x)); }",
-      "int LSB_indexll(ll x) { return (x == 0 ? -1 : __builtin_ctzll(x)); }",
-      ""
-      ],
-      "description": ""
-      },
-
-    "23": {
-      "prefix": "YES__NO",
-      "body": [
-      "#define yes cout << \"YES\" << endl",
-      "#define no cout << \"NO\" << endl"
-      ],
-      "description": ""
-    },
-
-    "24": {
-      "prefix": "zz Graph DSU",
-      "body": [
-      "struct DSU {",
-      "    vector<int> par, rnk, sz;",
-      "    int c;",
-      "    DSU(int n) : par(n + 1), rnk(n + 1, 0), sz(n + 1, 1), c(n) {",
-      "        for (int i = 1; i <= n; ++i)",
-      "            par[i] = i;",
-      "    }",
-      "    int find(int i) {",
-      "        return (par[i] == i ? i : (par[i] = find(par[i])));",
-      "    }",
-      "    bool same(int i, int j) {",
-      "        return find(i) == find(j);",
-      "    }",
-      "    int get_size(int i) {",
-      "        return sz[find(i)];",
-      "    }",
-      "    int Union(int i, int j) {",
-      "        if ((i = find(i)) == (j = find(j)))",
-      "            return -1;",
-      "        else",
-      "            --c;",
-      "        if (rnk[i] > rnk[j])",
-      "            swap(i, j);",
-      "        par[i] = j;",
-      "        sz[j] += sz[i];",
-      "        if (rnk[i] == rnk[j])",
-      "            rnk[j]++;",
-      "        return j;",
-      "    }",
-      "};"
-      ],
-      "description": ""
-      },
-
-      "25": {
-      "prefix": "zz Geometry point_Location",
-      "body": [
-      "ll point_location(ll x1, ll y1, ll x2, ll y2, ll x3, ll y3) {",
-      "    ll cross = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1);",
-      "    if (cross == 0) return 0;  // TOUCH / ON THE LINE",
-      "    else if (cross > 0) return 1;  // LEFT",
-      "    else return -1;  // RIGHT",
-      "}",
-      "",
-      "bool isInside(ll x1, ll y1, ll x2, ll y2, ll x3, ll y3) {",
-      "    ",
-      "    ll chk = point_location(x1, y1, x2, y2, x3, y3);  // chk == 0, same Line",
-      "    if(chk == 0) {",
-      "        return(x3 >= min(x1, x2) && x3 <= max(x1, x2) && y3 >= min(y1, y2) && y3 <= max(y1, y2));",
-      "    }",
-      "    return false;",
-      "}"
-      ],
-      "description": ""
-      },
-
-      "26": {
-      "prefix": "zz Geometry Convex_Hull",
-      "body": [
-      "vector<pair<ll, ll>> convex_hull(vector<pair<ll, ll>>p) {",
-      "  ll m, k=1, n=p.size(); if(n<=1) return p;",
-      "  sort(p.begin(), p.end()); ",
-      "  vector<pair<ll, ll>>hull; k=hull.size();",
-      "",
-      "  for(ll i=0; i<n; i++) {",
-      "    m = hull.size();",
-      "    while( m >= k+2 && point_location(hull[m-2].first, hull[m-2].second, hull[m-1].first, hull[m-1].second, p[i].first, p[i].second) > 0) {  // >=0 dile same point thakle mibe na",
-      "      hull.pop_back();                            // mane hoilo p1 and p2 doita same line e ",
-      "      m = hull.size();                              // thakle ekta nibe",
-      "    }",
-      "    hull.push_back(p[i]);",
-      "  }",
-      "",
-      "  hull.pop_back(); ",
-      "  k=hull.size();",
-      "",
-      "  for(ll i=n-1; i>=0; i--) {",
-      "    m = hull.size();",
-      "    while(m >= k+2 && point_location(hull[m-2].first, hull[m-2].second, hull[m-1].first, hull[m-1].second, p[i].first, p[i].second)>0) {",
-      "      hull.pop_back();",
-      "      m = hull.size();",
-      "    }",
-      "    hull.push_back(p[i]);",
-      "  }",
-      "",
-      "  hull.pop_back();",
-      "  return hull;",
-      "}"
-      ],
-      "description": ""
-      },
-
-      "27": {
-      "prefix": "zz NT Bin-Dec Convertion",
-      "body": [
-      "ll binaryToDecimal(string &s) {",
-      "    ll ans = 0;",
-      "    ll base = 1; ",
-      "",
-      "    for (ll i = s.length() - 1; i >= 0; i--) {",
-      "        if (s[i] == '1') {",
-      "            ans += base;",
-      "        }",
-      "        base *= 2;",
-      "    }",
-      "    return ans;",
-      "}",
-      "",
-      "string decimalToBinary(ll n) {",
-      "    bitset<10> b(n);",
-      "    string s = b.to_string();",
-      "    return s;",
-      "}",
-      "",
-      ""
-      ],
-      "description": ""
-      },
-
-      "28": {
-      "prefix": "zz NT print_binary",
-      "body": [
-      "void print_binary(ll n) {",
-      "    for(int i=31; i>=0; i--) {",
-      "        cout << ((n >> i) & 1);",
-      "    }",
-      "    cout << endl;",
-      "}"
-      ],
-      "description": ""
-      },
-
-     "29": {
-      "prefix": "zz 2D prefix Sum",
-      "body": [
-      "void solve() {",
-      "    int n, m; cin >> n >> m;",
-      "    vector<vll> arr(n+1, vll (m+1));",
-      "    vector<vll> pref(n+1, vll (m+1));",
-      "    for (int i = 1; i <= n; i++) {",
-      "        for (int j = 1; j <= m; j++) {",
-      "            cin >> arr[i][j];",
-      "        }",
-      "    }",
-      "    for (int i = 1; i <= n; i++) {",
-      "        for (int j = 1; j <= m; j++) {",
-      "            pref[i][j] = pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1] + arr[i][j];",
-      "        }",
-      "    }",
-      "    int q; cin >> q;",
-      "    while (q--) {",
-      "        int x1, y1, x2, y2; cin >> x1 >> y1 >> x2 >> y2;",
-      "        int ans = 0;",
-      "        ans = pref[x2][y2] - pref[x1 - 1][y2] - pref[x2][y1 - 1] + pref[x1 - 1][y1 - 1];",
-      "        cout << ans << endl;",
-      "    }",
-      "}",
-      ""
-      ],
-      "description": ""
-      },
-
-      "30": {
-      "prefix": "zz Geometry Polygon Area",
-      "body": [
-      "ll polygon_area(vector<pll> &vp) {",
-      "    ll sum_1 = 0, sum_2 = 0, n = vp.size(), area = 0;",
-      "    for(int i=0; i<n-1; i++) {",
-      "        sum_1 += (vp[i].first * vp[i+1].second);",
-      "        sum_2 += (vp[i].second * vp[i+1].first);",
-      "    }",
-      "",
-      "    area =  sum_1 - sum_2; // div by 2 is actial rule but here asked for 2*area;",
-      "    return abs(area);",
-      "}",
-      ""
-      ],
-      "description": ""
-      },
-
-      "31": {
-      "prefix": "zz String Hashing",
-      "body": [
-      "//primes = {285897553, 745494041, 693888673, 950758511, 282174533, 847345579, 722520917, 354688703, 963459817, 139793893};",
-      "const int N = 1e6+12;",
-      "const int b1 = 137, b2 = 277;",
-      "const int M1 = 1e9+7, M2 = 139793893;",
-      "pair<int, int> pw[N], ipw[N], pref[N];",
-      "",
-      "ll big_mod(ll a, ll b, ll mod) {",
-      "   ll ans = 1;",
-      "   while(b) {",
-      "   if(b & 1) ans = (ans * a) % mod;",
-      "      a = (a * a) % mod;",
-      "      b >>= 1;",
-      "   }",
-      "   return ans;",
-      "}",
-      "",
-      "void prePower() {",
-      "   pw[0] = {1, 1};",
-      "   for(int i=1; i<N; i++) {",
-      "      pw[i].first = (1LL * pw[i-1].first * b1) % M1;",
-      "      pw[i].second = (1LL * pw[i-1].second * b2) % M2;",
-      "   }",
-      "",
-      "   ll p1_inv = big_mod(b1, M1-2, M1);",
-      "   ll p2_inv = big_mod(b2, M2-2, M2);",
-      "   ",
-      "   ipw[0] = {1, 1};",
-      "   for(int i=1; i<N; i++) {",
-      "      ipw[i].first = (1LL * ipw[i-1].first * p1_inv) % M1;",
-      "      ipw[i].second = (1LL * ipw[i-1].second * p2_inv) % M2;",
-      "   }",
-      "}",
-      "",
-      "pair<int, int> hash_of(string s) {",
-      "    int n = s.size();",
-      "    pair<int, int> hs = {0, 0};",
-      "    for(int i=0; i<n; i++) {",
-      "        hs.first += (1LL * s[i] * pw[i].first) % M1;",
-      "        hs.first %= M1;",
-      "        hs.second += (1LL * s[i] * pw[i].second) % M2;",
-      "        hs.second %= M2;",
-      "    }",
-      "    return hs;",
-      "}",
-      "",
-      "void build(string s) {",
-      "    int n = s.size();",
-      "    for(int i=0; i<n; i++) {",
-      "        pref[i].first = (1LL * s[i] * pw[i].first) % M1;",
-      "        if(i) pref[i].first = (pref[i].first + pref[i-1].first) % M1;",
-      "        pref[i].second = (1LL * s[i] * pw[i].second) % M2;",
-      "        if(i) pref[i].second = (pref[i].second + pref[i-1].second) % M2;",
-      "    }",
-      "}",
-      "",
-      "pair<int, int> get_hash(int i, int j) {",
-      "    pair<int, int> hs = {0, 0};",
-      "    hs.first = pref[j].first;",
-      "    if(i) hs.first = ( ((hs.first - pref[i-1].first) % M1) + M1) % M1;",
-      "    hs.first = (1LL * hs.first * ipw[i].first) % M1;",
-      "",
-      "    hs.second = pref[j].second;",
-      "    if(i) hs.second = ( ((hs.second - pref[i-1].second) % M2) + M2) % M2;",
-      "    hs.second = (1LL * hs.second * ipw[i].second) % M2;",
-      "    return hs;",
-      "}",
-      ],
-      "description": ""
-      },
-
-      "32": {
-      "prefix": "zz GP Hash Table",
-      "body": [
-      "#include<ext/pb_ds/assoc_container.hpp>",
-      "#include<ext/pb_ds/tree_policy.hpp>",
-      "using namespace __gnu_pbds;",
-      "gp_hash_table<ll, ll> mp;"
-      ],
-      "description": ""
-      },
-     
-     "33": {
+      "208": {
       "prefix": "zz Graph DFS on Grid",
       "body": [
             "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
@@ -915,7 +1213,7 @@
       "description": ""
       },
 
-      "34": {
+      "209": {
       "prefix": "zz Graph DFS Bipartite",
       "body": [
       "ll n, m;",
@@ -939,7 +1237,7 @@
       "description": ""
       },
 
-      "35": {
+      "210": {
       "prefix": "zz Graph DFS Cycle",
       "body": [
       "ll n, m, st = -1, ed = -1;",
@@ -964,38 +1262,38 @@
       "description": ""
       },
 
-      "36": {
+      "211": {
       "prefix": "zz Graph BFS Bipartite",
       "body": [
-      "ll n, m;",
-      "vector<ll> g[N];",
-      "vector<ll> color(N, -1); ",
-      "",
-      "bool yo = true;",
-      "",
-      "void bfs(int s) {",
-      "    queue<int> q;",
-      "    q.push(s);",
-      "    color[s] = 1;",
-      "",
-      "    while (!q.empty()) {",
-      "        int u = q.front();",
-      "        q.pop();",
-      "",
-      "        for (int v : g[u]) {",
-      "            if (color[v] == -1) {",
-      "                color[v] = (color[u] == 1? 2:1);",
-      "                q.push(v);",
-      "            }",
-      "            else if(color[v] == color[u]) yo = false;",
-      "        }",
-      "    }",
-      "}"
+            "ll n, m;",
+            "vector<ll> g[N];",
+            "vector<ll> color(N, -1); ",
+            "",
+            "bool yo = true;",
+            "",
+            "void bfs(int s) {",
+            "    queue<int> q;",
+            "    q.push(s);",
+            "    color[s] = 1;",
+            "",
+            "    while (!q.empty()) {",
+            "        int u = q.front();",
+            "        q.pop();",
+            "",
+            "        for (int v : g[u]) {",
+            "            if (color[v] == -1) {",
+            "                color[v] = (color[u] == 1? 2:1);",
+            "                q.push(v);",
+            "            }",
+            "            else if(color[v] == color[u]) yo = false;",
+            "        }",
+            "    }",
+            "}"
       ],
       "description": ""
       },
 
-      "37": {
+      "212": {
             "prefix": "zz Graph BFS On Grid",
             "body": [
                   "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
@@ -1036,7 +1334,332 @@
             "description": ""
       },
 
-      "38": {
+
+      "213": {
+            "prefix": "zz Graph Girth min_len_cycle",
+            "body": [
+                  "// Graph Girth - min len of a cycle in graph",
+                  "",
+                  "// Created on: 2026-01-15 02:51",
+                  "// By the hand of: Nazmul_Huda",
+                  "",
+                  "#include <bits/stdc++.h>",
+                  "using namespace std;",
+                  "typedef long long ll;",
+                  "#define vll vector<ll>",
+                  "#define pll pair<ll, ll>",
+                  "#define endl \"\\n\" ",
+                  "#define all(v) v.begin(), v.end()",
+                  "const int N = 2e5+123;",
+                  "const ll INF = 100000000;",
+                  "",
+                  "vector<ll> g[N]; ",
+                  "vector<bool> vis;",
+                  "vll par, lvl;",
+                  "ll n, m; ",
+                  "",
+                  "void g_clear(int n){",
+                  "    par.assign(n+1, -1);",
+                  "    lvl.assign(n+1, 0);",
+                  "    vis.assign(n+1, false);",
+                  "}",
+                  "",
+                  "ll bfs(int s) {",
+                  "    g_clear(n);",
+                  "    queue<int> q;",
+                  "    q.push(s);",
+                  "    vis[s] = true, lvl[s] = 1, par[s] = s;",
+                  "",
+                  "    ll score = INT_MAX;",
+                  "",
+                  "    while (!q.empty()) {",
+                  "        int u = q.front();",
+                  "        q.pop();",
+                  "",
+                  "        for (int v : g[u]) {",
+                  "            if (!vis[v]) {",
+                  "                vis[v] = true, lvl[v] = lvl[u] + 1, par[v] = u;",
+                  "                q.push(v);",
+                  "            }",
+                  "            else if(vis[v] && v != par[u]) {",
+                  "                score = min(score, lvl[u] + lvl[v] - 1);",
+                  "            }",
+                  "        }",
+                  "    }",
+                  "    return score;",
+                  "}",
+                  "",
+                  "void solve() {",
+                  "    cin >> n >> m;",
+                  "    for(int i=1; i<=m; i++) {",
+                  "        ll u, v; cin >> u >> v;",
+                  "        g[u].push_back(v);",
+                  "        g[v].push_back(u);",
+                  "    }",
+                  "",
+                  "    ll ans = INF;",
+                  "    for(int i=1; i<=n; i++) {",
+                  "        ans = min(ans, bfs(i));",
+                  "    }",
+                  "",
+                  "    if(ans == INF) cout << -1 << endl;",
+                  "    else cout << ans << endl;",
+                  "",
+                  "}",
+                  "",
+                  "",
+                  "int main() {",
+                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
+                  "    cout.tie(0);",
+                  "",
+                  "    ll tc = 1; // cin >> tc;",
+                  "    while(tc--) {",
+                  "        solve();",
+                  "    }",
+                  "}"
+            ],
+            "description": ""
+      },
+
+      "214": {
+            "prefix": "zz Graph DFS BFS",
+            "body": [
+                  "",
+                  "vector<ll> g[N]; ",
+                  "vector<bool> vis;",
+                  "vll par, lvl;",
+                  "",
+                  "//For Test Case",
+                  "void g_clear(int n){",
+                  "    for(int i=0; i<=n; i++) g[i].clear();",
+                  "    par.assign(n+1, -1);",
+                  "    lvl.assign(n+1, -1);",
+                  "    vis.assign(n+1, false);",
+                  "}",
+                  "",
+                  "",
+                  "//DFS",
+                  "void dfs(ll u) {",
+                  "    vis[u] = true;",
+                  "    for(auto v : g[u]) {",
+                  "        if(!vis[v]) dfs(v);",
+                  "    }",
+                  "}",
+                  "",
+                  "//BFS",
+                  "void bfs(int s) {",
+                  "    queue<int> q;",
+                  "    q.push(s);",
+                  "    vis[s] = true, lvl[s] = 0, par[s] = s;",
+                  "",
+                  "    while (!q.empty()) {",
+                  "        int u = q.front();",
+                  "        q.pop();",
+                  "",
+                  "        for (int v : g[u]) {",
+                  "            if (!vis[v]) {",
+                  "                vis[v] = true, lvl[v] = lvl[u] + 1, par[v] = u;",
+                  "                q.push(v);",
+                  "            }",
+                  "        }",
+                  "    }",
+                  "}"
+            ],
+            "description": ""
+      },
+
+      "215": {
+            "prefix": "zz Graph Topo Sort",
+            "body": [
+                  "#include <bits/stdc++.h>",
+                  "using namespace std;",
+                  "typedef long long ll;",
+                  "#define vll vector<ll>",
+                  "#define pll pair<ll, ll>",
+                  "#define endl \"\\n\" ",
+                  "#define all(v) v.begin(), v.end()",
+                  "const int N = 2e5+123;",
+                  " ",
+                  "vector<ll> g[N]; ",
+                  "vector<bool> vis;",
+                  "vll par, lvl, ans;",
+                  " ",
+                  "void g_clear(int n){",
+                  "    for(int i=0; i<=n; i++) g[i].clear();",
+                  "    par.assign(n+1, -1);",
+                  "    lvl.assign(n+1, 0);",
+                  "    vis.assign(n+1, false);",
+                  "}",
+                  " ",
+                  "void dfs(ll u) {",
+                  "    vis[u] = true;",
+                  "    for(auto v : g[u]) {",
+                  "        if(!vis[v]) {",
+                  "            dfs(v);",
+                  "        }",
+                  "    }",
+                  "    ans.push_back(u);",
+                  "}",
+                  " ",
+                  "void solve() {",
+                  " ",
+                  "    ll n, m; cin >> n >> m;",
+                  "    g_clear(n);",
+                  "    for(int i=1; i<=m; i++) {",
+                  "        ll u, v; cin >> u >> v;",
+                  "        g[u].push_back(v);",
+                  "    }",
+                  " ",
+                  "    for(int i=1; i<=n; i++) if(!vis[i]) dfs(i);",
+                  " ",
+                  "    reverse(all(ans));",
+                  "    vll mp(n+1, 0);",
+                  "    for(int i=0; i<ans.size(); i++) mp[ans[i]] = i;",
+                  " ",
+                  "    bool ok = true;",
+                  "    for(int i=1; i<=n; i++) {",
+                  "        for(auto u : g[i]) {",
+                  "            if(mp[i] >= mp[u]) {",
+                  "                ok = false; ",
+                  "            }",
+                  "        }",
+                  "    }",
+                  "    ",
+                  "    if(!ok) cout << \"IMPOSSIBLE\" << endl;",
+                  "    else {",
+                  "        for(int i=0; i<n; i++) cout << ans[i] << \" \";",
+                  "    }",
+                  "}",
+                  " ",
+                  " ",
+                  "int main() {",
+                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
+                  "    cout.tie(0);",
+                  " ",
+                  "    ll tc = 1; // cin >> tc;",
+                  "    while(tc--) {",
+                  "        solve();",
+                  "    }",
+                  "}"
+            ],
+            "description": ""
+      },
+
+      "216": {
+            "prefix": "zz Graph Cycle Directed",
+            "body": [
+                  "// Created on: 2026-01-14 19:01",
+                  "// By the hand of: Nazmul_Huda",
+                  " ",
+                  "#include <bits/stdc++.h>",
+                  "using namespace std;",
+                  "typedef long long ll;",
+                  "#define vll vector<ll>",
+                  "#define pll pair<ll, ll>",
+                  "#define endl \"\\n\" ",
+                  "#define all(v) v.begin(), v.end()",
+                  " ",
+                  "const int N = 2e5+123;",
+                  "vector<ll> g[N]; ",
+                  "vll lvl, par;",
+                  "int start = -1, finish = -1;",
+                  " ",
+                  "void g_clear(int n){",
+                  "    for(int i=0; i<=n; i++) g[i].clear();",
+                  "    lvl.assign(n+1, 0);",
+                  "    par.assign(n+1, -1);",
+                  "}",
+                  " ",
+                  "void dfs(ll u, ll p) {",
+                  "    lvl[u] = 1;",
+                  "    par[u] = p;",
+                  "    for(auto v : g[u]) {",
+                  "        if(lvl[v] == 0) {",
+                  "            dfs(v, u);",
+                  "        }",
+                  "        else if(lvl[v] == 1) {",
+                  "            start = u, finish = v;",
+                  "        }",
+                  "    }",
+                  "    lvl[u] = 2;",
+                  "}",
+                  " ",
+                  "void find_cycle(ll n) {",
+                  " ",
+                  "    for(int i=1; i<=n; i++) {",
+                  "        if(lvl[i] == 0 && start == -1) dfs(i, 0);",
+                  "    }",
+                  " ",
+                  "    if(start == -1) {",
+                  "        cout << \"IMPOSSIBLE\" << endl;",
+                  "    }",
+                  "    else {",
+                  "        vll x; ",
+                  "        ll node = start;",
+                  "        while(node != finish) {",
+                  "            x.push_back(node);",
+                  "            node = par[node];",
+                  "        }",
+                  "        x.push_back(finish);",
+                  "        x.push_back(start);",
+                  "        reverse(all(x));",
+                  "        ",
+                  "        cout << x.size() << endl;",
+                  "        for(int i=0; i<x.size(); i++) cout << x[i] << \" \"; ",
+                  "    }",
+                  "}",
+                  " ",
+                  "void solve() {",
+                  " ",
+                  "    ll n, m; cin >> n >> m;",
+                  "    g_clear(n);",
+                  " ",
+                  "    for(int i=1; i<=m; i++) {",
+                  "        ll u, v; cin >> u >> v;",
+                  "        g[u].push_back(v);",
+                  "    }",
+                  " ",
+                  "    find_cycle(n);",
+                  "}",
+                  " ",
+                  " ",
+                  "int main() {",
+                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
+                  "    cout.tie(0);",
+                  " ",
+                  "    ll tc = 1; // cin >> tc;",
+                  "    while(tc--) {",
+                  "        solve();",
+                  "    }",
+                  "}",
+                  " ",
+                  " ",
+                  "/*",
+                  "11 13",
+                  "1 2",
+                  "2 3",
+                  "4 3",
+                  "1 7",
+                  "7 6",
+                  "5 6",
+                  "4 5",
+                  "10 4",
+                  "9 10",
+                  "8 9",
+                  "5 11",
+                  "8 11",
+                  "4 8 ",
+                  "*/ ",
+                  " ",
+                  "/*",
+                  "5",
+                  "10 4 8 9 10 ",
+                  "*/"
+            ],
+            "description": ""
+      },
+
+      "217": {
       "prefix": "zz Graph Path Backtrack",
       "body": [
       "  string s;",
@@ -1053,7 +1676,7 @@
       "description": ""
       },
 
-     "39": {
+     "218": {
       "prefix": "zz Graph BFS Multiple Source",
       "body": [
       "#include <bits/stdc++.h>",
@@ -1190,7 +1813,328 @@
       "description": ""
       },
 
-      "40": {
+
+
+    
+    "219": {
+      "prefix": "zz Graph DSU",
+      "body": [
+      "struct DSU {",
+      "    vector<int> par, rnk, sz;",
+      "    int c;",
+      "    DSU(int n) : par(n + 1), rnk(n + 1, 0), sz(n + 1, 1), c(n) {",
+      "        for (int i = 1; i <= n; ++i)",
+      "            par[i] = i;",
+      "    }",
+      "    int find(int i) {",
+      "        return (par[i] == i ? i : (par[i] = find(par[i])));",
+      "    }",
+      "    bool same(int i, int j) {",
+      "        return find(i) == find(j);",
+      "    }",
+      "    int get_size(int i) {",
+      "        return sz[find(i)];",
+      "    }",
+      "    int Union(int i, int j) {",
+      "        if ((i = find(i)) == (j = find(j)))",
+      "            return -1;",
+      "        else",
+      "            --c;",
+      "        if (rnk[i] > rnk[j])",
+      "            swap(i, j);",
+      "        par[i] = j;",
+      "        sz[j] += sz[i];",
+      "        if (rnk[i] == rnk[j])",
+      "            rnk[j]++;",
+      "        return j;",
+      "    }",
+      "};"
+      ],
+      "description": ""
+      },
+
+
+
+
+
+
+
+      
+
+
+      // Geometry 900
+
+
+      "901": {
+      "prefix": "zz Geometry point_Location",
+      "body": [
+      "ll point_location(ll x1, ll y1, ll x2, ll y2, ll x3, ll y3) {",
+      "    ll cross = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1);",
+      "    if (cross == 0) return 0;  // TOUCH / ON THE LINE",
+      "    else if (cross > 0) return 1;  // LEFT",
+      "    else return -1;  // RIGHT",
+      "}",
+      "",
+      "bool isInside(ll x1, ll y1, ll x2, ll y2, ll x3, ll y3) {",
+      "    ",
+      "    ll chk = point_location(x1, y1, x2, y2, x3, y3);  // chk == 0, same Line",
+      "    if(chk == 0) {",
+      "        return(x3 >= min(x1, x2) && x3 <= max(x1, x2) && y3 >= min(y1, y2) && y3 <= max(y1, y2));",
+      "    }",
+      "    return false;",
+      "}"
+      ],
+      "description": ""
+      },
+
+
+      "902": {
+      "prefix": "zz Geometry Convex_Hull",
+      "body": [
+      "vector<pair<ll, ll>> convex_hull(vector<pair<ll, ll>>p) {",
+      "  ll m, k=1, n=p.size(); if(n<=1) return p;",
+      "  sort(p.begin(), p.end()); ",
+      "  vector<pair<ll, ll>>hull; k=hull.size();",
+      "",
+      "  for(ll i=0; i<n; i++) {",
+      "    m = hull.size();",
+      "    while( m >= k+2 && point_location(hull[m-2].first, hull[m-2].second, hull[m-1].first, hull[m-1].second, p[i].first, p[i].second) > 0) {  // >=0 dile same point thakle mibe na",
+      "      hull.pop_back();                            // mane hoilo p1 and p2 doita same line e ",
+      "      m = hull.size();                              // thakle ekta nibe",
+      "    }",
+      "    hull.push_back(p[i]);",
+      "  }",
+      "",
+      "  hull.pop_back(); ",
+      "  k=hull.size();",
+      "",
+      "  for(ll i=n-1; i>=0; i--) {",
+      "    m = hull.size();",
+      "    while(m >= k+2 && point_location(hull[m-2].first, hull[m-2].second, hull[m-1].first, hull[m-1].second, p[i].first, p[i].second)>0) {",
+      "      hull.pop_back();",
+      "      m = hull.size();",
+      "    }",
+      "    hull.push_back(p[i]);",
+      "  }",
+      "",
+      "  hull.pop_back();",
+      "  return hull;",
+      "}"
+      ],
+      "description": ""
+      },
+
+      "903": {
+      "prefix": "zz Geometry Polygon Area",
+      "body": [
+      "ll polygon_area(vector<pll> &vp) {",
+      "    ll sum_1 = 0, sum_2 = 0, n = vp.size(), area = 0;",
+      "    for(int i=0; i<n-1; i++) {",
+      "        sum_1 += (vp[i].first * vp[i+1].second);",
+      "        sum_2 += (vp[i].second * vp[i+1].first);",
+      "    }",
+      "",
+      "    area =  sum_1 - sum_2; // div by 2 is actial rule but here asked for 2*area;",
+      "    return abs(area);",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+
+
+
+
+
+
+
+      // RANDOM
+
+
+
+      "1001": {
+      "prefix": "zz Ordered set",
+      "body": [
+            "//// PBDS (Policy Based Data Structure - Ordered Set)",
+            "#include<ext/pb_ds/assoc_container.hpp>",
+            "#include<ext/pb_ds/tree_policy.hpp>",
+            "using namespace __gnu_pbds;",
+            "template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;",
+            "//oset <ll> s;  --> Declare ordered set",
+            "//s.order_of_key(val)  --> val ta kun index e ache",
+            "//*(s.find_by_order(i)) --> ith index e value"
+      ],
+      "description": ""
+	},
+
+     
+
+
+     "1002": {
+      "prefix": "zz 2D prefix Sum",
+      "body": [
+      "void solve() {",
+      "    int n, m; cin >> n >> m;",
+      "    vector<vll> arr(n+1, vll (m+1));",
+      "    vector<vll> pref(n+1, vll (m+1));",
+      "    for (int i = 1; i <= n; i++) {",
+      "        for (int j = 1; j <= m; j++) {",
+      "            cin >> arr[i][j];",
+      "        }",
+      "    }",
+      "    for (int i = 1; i <= n; i++) {",
+      "        for (int j = 1; j <= m; j++) {",
+      "            pref[i][j] = pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1] + arr[i][j];",
+      "        }",
+      "    }",
+      "    int q; cin >> q;",
+      "    while (q--) {",
+      "        int x1, y1, x2, y2; cin >> x1 >> y1 >> x2 >> y2;",
+      "        int ans = 0;",
+      "        ans = pref[x2][y2] - pref[x1 - 1][y2] - pref[x2][y1 - 1] + pref[x1 - 1][y1 - 1];",
+      "        cout << ans << endl;",
+      "    }",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+
+      "1003": {
+      "prefix": "zz GP Hash Table",
+      "body": [
+      "#include<ext/pb_ds/assoc_container.hpp>",
+      "#include<ext/pb_ds/tree_policy.hpp>",
+      "using namespace __gnu_pbds;",
+      "gp_hash_table<ll, ll> mp;"
+      ],
+      "description": ""
+      },
+     
+
+
+
+
+
+
+
+
+
+
+
+      // STRING 300
+
+
+      "301": {
+      "prefix": "zz String Hashing",
+      "body": [
+      "//primes = {285897553, 745494041, 693888673, 950758511, 282174533, 847345579, 722520917, 354688703, 963459817, 139793893};",
+      "const int N = 1e6+12;",
+      "const int b1 = 137, b2 = 277;",
+      "const int M1 = 1e9+7, M2 = 139793893;",
+      "pair<int, int> pw[N], ipw[N], pref[N];",
+      "",
+      "ll big_mod(ll a, ll b, ll mod) {",
+      "   ll ans = 1;",
+      "   while(b) {",
+      "   if(b & 1) ans = (ans * a) % mod;",
+      "      a = (a * a) % mod;",
+      "      b >>= 1;",
+      "   }",
+      "   return ans;",
+      "}",
+      "",
+      "void prePower() {",
+      "   pw[0] = {1, 1};",
+      "   for(int i=1; i<N; i++) {",
+      "      pw[i].first = (1LL * pw[i-1].first * b1) % M1;",
+      "      pw[i].second = (1LL * pw[i-1].second * b2) % M2;",
+      "   }",
+      "",
+      "   ll p1_inv = big_mod(b1, M1-2, M1);",
+      "   ll p2_inv = big_mod(b2, M2-2, M2);",
+      "   ",
+      "   ipw[0] = {1, 1};",
+      "   for(int i=1; i<N; i++) {",
+      "      ipw[i].first = (1LL * ipw[i-1].first * p1_inv) % M1;",
+      "      ipw[i].second = (1LL * ipw[i-1].second * p2_inv) % M2;",
+      "   }",
+      "}",
+      "",
+      "pair<int, int> hash_of(string s) {",
+      "    int n = s.size();",
+      "    pair<int, int> hs = {0, 0};",
+      "    for(int i=0; i<n; i++) {",
+      "        hs.first += (1LL * s[i] * pw[i].first) % M1;",
+      "        hs.first %= M1;",
+      "        hs.second += (1LL * s[i] * pw[i].second) % M2;",
+      "        hs.second %= M2;",
+      "    }",
+      "    return hs;",
+      "}",
+      "",
+      "void build(string s) {",
+      "    int n = s.size();",
+      "    for(int i=0; i<n; i++) {",
+      "        pref[i].first = (1LL * s[i] * pw[i].first) % M1;",
+      "        if(i) pref[i].first = (pref[i].first + pref[i-1].first) % M1;",
+      "        pref[i].second = (1LL * s[i] * pw[i].second) % M2;",
+      "        if(i) pref[i].second = (pref[i].second + pref[i-1].second) % M2;",
+      "    }",
+      "}",
+      "",
+      "pair<int, int> get_hash(int i, int j) {",
+      "    pair<int, int> hs = {0, 0};",
+      "    hs.first = pref[j].first;",
+      "    if(i) hs.first = ( ((hs.first - pref[i-1].first) % M1) + M1) % M1;",
+      "    hs.first = (1LL * hs.first * ipw[i].first) % M1;",
+      "",
+      "    hs.second = pref[j].second;",
+      "    if(i) hs.second = ( ((hs.second - pref[i-1].second) % M2) + M2) % M2;",
+      "    hs.second = (1LL * hs.second * ipw[i].second) % M2;",
+      "    return hs;",
+      "}",
+      ],
+      "description": ""
+      },
+
+      "302": {
+      "prefix": "zz String KMP",
+      "body": [
+      "int kmp(string s, string t) {",
+      "    vector<int> lps(t.size(), 0);",
+      "    for (int i = 1, len = 0; i < t.size(); ) {",
+      "        if (t[i] == t[len]) lps[i++] = ++len;",
+      "        else if (len) len = lps[len - 1];",
+      "        else lps[i++] = 0;",
+      "    }",
+      "",
+      "    int ans = 0;",
+      "    for (int i = 0, j = 0; i < s.size(); ) {",
+      "        if (s[i] == t[j]) i++, j++;",
+      "        if (j == t.size()) ans++, j = lps[j - 1];",
+      "        else if (i < s.size() && s[i] != t[j]) j ? j = lps[j - 1] : i++;",
+      "    }",
+      "",
+      "    return ans;",
+      "}"
+      ],
+      "description": ""
+      },
+
+     
+
+
+
+
+
+
+      // MATH 400
+     
+
+      "401": {
       "prefix": "zz Math Formula Nth_Term",
       "body": [
       "// an = a1 + (n - 1) * d ---> 1 3 5 7 9.... → a = 1, d = 2",
@@ -1212,7 +2156,7 @@
       "description": ""
       },
 
-      "41": {
+      "402": {
       "prefix": "zz Math Formula Sum_Of",
       "body": [
       "// 1 + 2 + ... + n ---> n(n+1)/2",
@@ -1254,87 +2198,19 @@
       "description": ""
       },
 
-      "42": {
-      "prefix": "fori",
-      "body": [
-      "for(int i=0; i<n; i++) "
-      ],
-      "description": ""
-      },
 
-      "43": {
-      "prefix": "forj",
-      "body": [
-      "for(int j=0; j<m; j++) "
-      ],
-      "description": ""
-      },
 
-      "44": {
-      "prefix": "zz String KMP",
-      "body": [
-      "int kmp(string s, string t) {",
-      "    vector<int> lps(t.size(), 0);",
-      "    for (int i = 1, len = 0; i < t.size(); ) {",
-      "        if (t[i] == t[len]) lps[i++] = ++len;",
-      "        else if (len) len = lps[len - 1];",
-      "        else lps[i++] = 0;",
-      "    }",
-      "",
-      "    int ans = 0;",
-      "    for (int i = 0, j = 0; i < s.size(); ) {",
-      "        if (s[i] == t[j]) i++, j++;",
-      "        if (j == t.size()) ans++, j = lps[j - 1];",
-      "        else if (i < s.size() && s[i] != t[j]) j ? j = lps[j - 1] : i++;",
-      "    }",
-      "",
-      "    return ans;",
-      "}"
-      ],
-      "description": ""
-      },
 
-      "45": {
-      "prefix": "ifor",
-      "body": [
-      "for(int i=n-1; i>=0; i--)"
-      ],
-      "description": ""
-      },
 
-      "46": {
-      "prefix": "zz NT NumberofDigit",
-      "body": [
-      "ll digits = floor(log10(n))+1;"
-      ],
-      "description": ""
-      },
+           
 
-      "47": {
-      "prefix": "fori1",
-      "body": [
-      "for(int i=1; i<=n; i++)"
-      ],
-      "description": ""
-      },
 
-      "48": {
-      "prefix": "forj1",
-      "body": [
-      "for(int j=1; j<=m; j++)"
-      ],
-      "description": ""
-      },
 
-      "49": {
-      "prefix": "jfor",
-      "body": [
-      "for(int j=m-1; j>=0; j--)"
-      ],
-      "description": ""
-      },
 
-      "50": {
+
+      // COMBINATORICS 500
+    
+      "501": {
       "prefix": "zz Combinatorics",
       "body": [
       "ll fact[N], i_fact[N];",
@@ -1375,8 +2251,40 @@
       "description": ""
       },
 
-      "51": {
-      "prefix": "Divide and Conqur - Merger Sort",
+
+      "502": {
+      "prefix": "zz comb nCr with Multiplicative Formula",
+      "body": [
+      "ll nCr(ll n, ll r) {",
+      "    if(r > n) return 0;",
+      "    if(r > n-r) r = n-r;",
+      "",
+      "    ll ans = 1;",
+      "    for(int i=1; i<=r; i++) {",
+      "        ll val = n - r + i;",
+      "        ans = (ans * val) / i;",
+      "    }",
+      "    return ans;",
+      "}"
+      ],
+      "description": ""
+      },
+
+
+
+
+
+
+
+
+
+
+
+      // DS 600
+
+
+      "601": {
+      "prefix": "zz DS Divide and Conqur - Merger Sort",
       "body": [
       "",
       "ll n;",
@@ -1430,25 +2338,8 @@
       "description": ""
       },
 
-      "52": {
-      "prefix": "nCr with Multiplicative Formula",
-      "body": [
-      "ll nCr(ll n, ll r) {",
-      "    if(r > n) return 0;",
-      "    if(r > n-r) r = n-r;",
-      "",
-      "    ll ans = 1;",
-      "    for(int i=1; i<=r; i++) {",
-      "        ll val = n - r + i;",
-      "        ans = (ans * val) / i;",
-      "    }",
-      "    return ans;",
-      "}"
-      ],
-      "description": ""
-      },
 
-      "53": {
+      "602": {
             "prefix": "zz DS Monotonic Stack",
             "body": [
             "// 1",
@@ -1511,8 +2402,9 @@
             "description": ""
       },
 
-      "54": {
-      "prefix": "zz Segment Tree",
+
+      "603": {
+      "prefix": "zz DS Segment Tree",
       "body": [
       "#include <bits/stdc++.h>",
       "using namespace std;",
@@ -1602,419 +2494,7 @@
       "}"
       ],
       "description": ""
-      },
-
-      "55": {
-            "prefix": "zz Graph Girth min_len_cycle",
-            "body": [
-                  "// Graph Girth - min len of a cycle in graph",
-                  "",
-                  "// Created on: 2026-01-15 02:51",
-                  "// By the hand of: Nazmul_Huda",
-                  "",
-                  "#include <bits/stdc++.h>",
-                  "using namespace std;",
-                  "typedef long long ll;",
-                  "#define vll vector<ll>",
-                  "#define pll pair<ll, ll>",
-                  "#define endl \"\\n\" ",
-                  "#define all(v) v.begin(), v.end()",
-                  "const int N = 2e5+123;",
-                  "const ll INF = 100000000;",
-                  "",
-                  "vector<ll> g[N]; ",
-                  "vector<bool> vis;",
-                  "vll par, lvl;",
-                  "ll n, m; ",
-                  "",
-                  "void g_clear(int n){",
-                  "    par.assign(n+1, -1);",
-                  "    lvl.assign(n+1, 0);",
-                  "    vis.assign(n+1, false);",
-                  "}",
-                  "",
-                  "ll bfs(int s) {",
-                  "    g_clear(n);",
-                  "    queue<int> q;",
-                  "    q.push(s);",
-                  "    vis[s] = true, lvl[s] = 1, par[s] = s;",
-                  "",
-                  "    ll score = INT_MAX;",
-                  "",
-                  "    while (!q.empty()) {",
-                  "        int u = q.front();",
-                  "        q.pop();",
-                  "",
-                  "        for (int v : g[u]) {",
-                  "            if (!vis[v]) {",
-                  "                vis[v] = true, lvl[v] = lvl[u] + 1, par[v] = u;",
-                  "                q.push(v);",
-                  "            }",
-                  "            else if(vis[v] && v != par[u]) {",
-                  "                score = min(score, lvl[u] + lvl[v] - 1);",
-                  "            }",
-                  "        }",
-                  "    }",
-                  "    return score;",
-                  "}",
-                  "",
-                  "void solve() {",
-                  "    cin >> n >> m;",
-                  "    for(int i=1; i<=m; i++) {",
-                  "        ll u, v; cin >> u >> v;",
-                  "        g[u].push_back(v);",
-                  "        g[v].push_back(u);",
-                  "    }",
-                  "",
-                  "    ll ans = INF;",
-                  "    for(int i=1; i<=n; i++) {",
-                  "        ans = min(ans, bfs(i));",
-                  "    }",
-                  "",
-                  "    if(ans == INF) cout << -1 << endl;",
-                  "    else cout << ans << endl;",
-                  "",
-                  "}",
-                  "",
-                  "",
-                  "int main() {",
-                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
-                  "    cout.tie(0);",
-                  "",
-                  "    ll tc = 1; // cin >> tc;",
-                  "    while(tc--) {",
-                  "        solve();",
-                  "    }",
-                  "}"
-            ],
-            "description": ""
-      },
-
-      "56": {
-            "prefix": "zz Graph DFS BFS",
-            "body": [
-                  "",
-                  "vector<ll> g[N]; ",
-                  "vector<bool> vis;",
-                  "vll par, lvl;",
-                  "",
-                  "//For Test Case",
-                  "void g_clear(int n){",
-                  "    for(int i=0; i<=n; i++) g[i].clear();",
-                  "    par.assign(n+1, -1);",
-                  "    lvl.assign(n+1, -1);",
-                  "    vis.assign(n+1, false);",
-                  "}",
-                  "",
-                  "",
-                  "//DFS",
-                  "void dfs(ll u) {",
-                  "    vis[u] = true;",
-                  "    for(auto v : g[u]) {",
-                  "        if(!vis[v]) dfs(v);",
-                  "    }",
-                  "}",
-                  "",
-                  "//BFS",
-                  "void bfs(int s) {",
-                  "    queue<int> q;",
-                  "    q.push(s);",
-                  "    vis[s] = true, lvl[s] = 0, par[s] = s;",
-                  "",
-                  "    while (!q.empty()) {",
-                  "        int u = q.front();",
-                  "        q.pop();",
-                  "",
-                  "        for (int v : g[u]) {",
-                  "            if (!vis[v]) {",
-                  "                vis[v] = true, lvl[v] = lvl[u] + 1, par[v] = u;",
-                  "                q.push(v);",
-                  "            }",
-                  "        }",
-                  "    }",
-                  "}"
-            ],
-            "description": ""
-      },
-
-      "57": {
-            "prefix": "zz Graph Topo Sort",
-            "body": [
-                  "#include <bits/stdc++.h>",
-                  "using namespace std;",
-                  "typedef long long ll;",
-                  "#define vll vector<ll>",
-                  "#define pll pair<ll, ll>",
-                  "#define endl \"\\n\" ",
-                  "#define all(v) v.begin(), v.end()",
-                  "const int N = 2e5+123;",
-                  " ",
-                  "vector<ll> g[N]; ",
-                  "vector<bool> vis;",
-                  "vll par, lvl, ans;",
-                  " ",
-                  "void g_clear(int n){",
-                  "    for(int i=0; i<=n; i++) g[i].clear();",
-                  "    par.assign(n+1, -1);",
-                  "    lvl.assign(n+1, 0);",
-                  "    vis.assign(n+1, false);",
-                  "}",
-                  " ",
-                  "void dfs(ll u) {",
-                  "    vis[u] = true;",
-                  "    for(auto v : g[u]) {",
-                  "        if(!vis[v]) {",
-                  "            dfs(v);",
-                  "        }",
-                  "    }",
-                  "    ans.push_back(u);",
-                  "}",
-                  " ",
-                  "void solve() {",
-                  " ",
-                  "    ll n, m; cin >> n >> m;",
-                  "    g_clear(n);",
-                  "    for(int i=1; i<=m; i++) {",
-                  "        ll u, v; cin >> u >> v;",
-                  "        g[u].push_back(v);",
-                  "    }",
-                  " ",
-                  "    for(int i=1; i<=n; i++) if(!vis[i]) dfs(i);",
-                  " ",
-                  "    reverse(all(ans));",
-                  "    vll mp(n+1, 0);",
-                  "    for(int i=0; i<ans.size(); i++) mp[ans[i]] = i;",
-                  " ",
-                  "    bool ok = true;",
-                  "    for(int i=1; i<=n; i++) {",
-                  "        for(auto u : g[i]) {",
-                  "            if(mp[i] >= mp[u]) {",
-                  "                ok = false; ",
-                  "            }",
-                  "        }",
-                  "    }",
-                  "    ",
-                  "    if(!ok) cout << \"IMPOSSIBLE\" << endl;",
-                  "    else {",
-                  "        for(int i=0; i<n; i++) cout << ans[i] << \" \";",
-                  "    }",
-                  "}",
-                  " ",
-                  " ",
-                  "int main() {",
-                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
-                  "    cout.tie(0);",
-                  " ",
-                  "    ll tc = 1; // cin >> tc;",
-                  "    while(tc--) {",
-                  "        solve();",
-                  "    }",
-                  "}"
-            ],
-            "description": ""
-      },
-
-      "58": {
-            "prefix": "zz Graph Cycle Directed",
-            "body": [
-                  "// Created on: 2026-01-14 19:01",
-                  "// By the hand of: Nazmul_Huda",
-                  " ",
-                  "#include <bits/stdc++.h>",
-                  "using namespace std;",
-                  "typedef long long ll;",
-                  "#define vll vector<ll>",
-                  "#define pll pair<ll, ll>",
-                  "#define endl \"\\n\" ",
-                  "#define all(v) v.begin(), v.end()",
-                  " ",
-                  "const int N = 2e5+123;",
-                  "vector<ll> g[N]; ",
-                  "vll lvl, par;",
-                  "int start = -1, finish = -1;",
-                  " ",
-                  "void g_clear(int n){",
-                  "    for(int i=0; i<=n; i++) g[i].clear();",
-                  "    lvl.assign(n+1, 0);",
-                  "    par.assign(n+1, -1);",
-                  "}",
-                  " ",
-                  "void dfs(ll u, ll p) {",
-                  "    lvl[u] = 1;",
-                  "    par[u] = p;",
-                  "    for(auto v : g[u]) {",
-                  "        if(lvl[v] == 0) {",
-                  "            dfs(v, u);",
-                  "        }",
-                  "        else if(lvl[v] == 1) {",
-                  "            start = u, finish = v;",
-                  "        }",
-                  "    }",
-                  "    lvl[u] = 2;",
-                  "}",
-                  " ",
-                  "void find_cycle(ll n) {",
-                  " ",
-                  "    for(int i=1; i<=n; i++) {",
-                  "        if(lvl[i] == 0 && start == -1) dfs(i, 0);",
-                  "    }",
-                  " ",
-                  "    if(start == -1) {",
-                  "        cout << \"IMPOSSIBLE\" << endl;",
-                  "    }",
-                  "    else {",
-                  "        vll x; ",
-                  "        ll node = start;",
-                  "        while(node != finish) {",
-                  "            x.push_back(node);",
-                  "            node = par[node];",
-                  "        }",
-                  "        x.push_back(finish);",
-                  "        x.push_back(start);",
-                  "        reverse(all(x));",
-                  "        ",
-                  "        cout << x.size() << endl;",
-                  "        for(int i=0; i<x.size(); i++) cout << x[i] << \" \"; ",
-                  "    }",
-                  "}",
-                  " ",
-                  "void solve() {",
-                  " ",
-                  "    ll n, m; cin >> n >> m;",
-                  "    g_clear(n);",
-                  " ",
-                  "    for(int i=1; i<=m; i++) {",
-                  "        ll u, v; cin >> u >> v;",
-                  "        g[u].push_back(v);",
-                  "    }",
-                  " ",
-                  "    find_cycle(n);",
-                  "}",
-                  " ",
-                  " ",
-                  "int main() {",
-                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
-                  "    cout.tie(0);",
-                  " ",
-                  "    ll tc = 1; // cin >> tc;",
-                  "    while(tc--) {",
-                  "        solve();",
-                  "    }",
-                  "}",
-                  " ",
-                  " ",
-                  "/*",
-                  "11 13",
-                  "1 2",
-                  "2 3",
-                  "4 3",
-                  "1 7",
-                  "7 6",
-                  "5 6",
-                  "4 5",
-                  "10 4",
-                  "9 10",
-                  "8 9",
-                  "5 11",
-                  "8 11",
-                  "4 8 ",
-                  "*/ ",
-                  " ",
-                  "/*",
-                  "5",
-                  "10 4 8 9 10 ",
-                  "*/"
-            ],
-            "description": ""
-      },
-
-      "59": {
-            "prefix": "zz Graph longest Path down to v",
-            "body": [
-                  "ll dfs(ll u) {",
-                  "    vis[u] = true;",
-                  "    for(auto v : g[u]) {",
-                  "",
-                  "        if(!vis[v]) {",
-                  "            lvl[u] = max(lvl[u], dfs(v) + 1);",
-                  "        }",
-                  "    }",
-                  "    return lvl[u];",
-                  "}",
-                  ""
-            ],
-            "description": ""
-      },
-
-      "60": {
-            "prefix": "zz Graph Tree Diameter",
-            "body": [
-                  "#include <bits/stdc++.h>",
-                  "using namespace std;",
-                  "typedef long long ll;",
-                  "#define vll vector<ll>",
-                  "#define pll pair<ll, ll>",
-                  "#define endl \"\\n\" ",
-                  "#define all(v) v.begin(), v.end()",
-                  "const int N = 2e5+123;",
-                  "",
-                  "vector<ll> g[N]; ",
-                  "vll lvl;",
-                  "",
-                  "void g_clear(int n){",
-                  "    for(int i=0; i<=n; i++) g[i].clear();",
-                  "    lvl.assign(n+1, 0);",
-                  "}",
-                  "",
-                  "void dfs(ll u, ll p) {",
-                  "    for(auto v : g[u]) {",
-                  "        if(v != p) {",
-                  "            lvl[v] = 1 + lvl[u];",
-                  "            dfs(v, u);",
-                  "        }",
-                  "    }",
-                  "}",
-                  "",
-                  "pll diameter(ll n) {",
-                  "",
-                  "    dfs(1, 0);",
-                  "    ll d1 = max_element(all(lvl)) - lvl.begin();",
-                  "    lvl.assign(n+1, 0);",
-                  "    dfs(d1, 0);",
-                  "    ll d2 = max_element(all(lvl)) - lvl.begin();",
-                  "",
-                  "    return {d1, d2};",
-                  "}",
-                  "",
-                  "void solve() {",
-                  "    ll n; cin >> n;",
-                  "    g_clear(n);",
-                  "    for(int i=1; i<n; i++) {",
-                  "        ll u, v; cin >> u >> v;",
-                  "        g[u].push_back(v);",
-                  "        g[v].push_back(u);",
-                  "    }",
-                  "",
-                  "   auto x = diameter(n);",
-                  "   cout << x.first << \" \" << x.second << endl;",
-                  "}",
-                  "",
-                  "",
-                  "int main() {",
-                  "    ios_base::sync_with_stdio(0); cin.tie(0); ",
-                  "    cout.tie(0);",
-                  "",
-                  "    ll tc = 1;  cin >> tc;",
-                  "    while(tc--) {",
-                  "        solve();",
-                  "    }",
-                  "}"
-            ],
-            "description": ""
-      }
-
-      
-
+      }, 
 
 
 
