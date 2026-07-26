@@ -1,6 +1,7 @@
 using int64 = long long;
 using u64 = uint64_t;
 using u128 = __uint128_t;
+
 u64 mod_mul(u64 a, u64 b, u64 mod) {
     return (u128)a * b % mod;
 }
